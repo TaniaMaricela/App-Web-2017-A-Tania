@@ -1,0 +1,81 @@
+/*
+    body{
+        background-color: blue;
+        color: #ffb270;
+    }
+    h1{
+        background-color: blueviolet;
+        color: antiquewhite;
+    }
+    h2{
+        background-color: brown;
+        color: black;
+    }
+    h3{
+        background-color: darkslategrey;
+        color: darkgreen;
+    }
+    h4{
+        background-color: green;
+        color: #ff7013;
+    }
+
+    div{
+        background-color: black;
+        color: white;
+    }*/
+
+/*
+h1{
+    background-color: red;
+    color: blue;
+}
+#uno {
+    background-color: yellow;
+    color: black;
+}
+button {
+    background-color: #46a0ff;
+    color: #ff2a2c;
+}
+#boton{
+    background-color: #ff2a2c;
+    color: #46a0ff;
+}
+*/
+button {
+    border: solid;
+    border-color: red;
+}
+
+#malicioso {
+    background-color: black;
+}
+
+.boton-cuidado {
+    background-color: crimson;
+    color: bisque;
+}
+
+.boton-exito {
+    background-color: green;
+    color: azure;
+}
+
+.boton-exito {
+    background-color: darkblue;
+    color: azure;
+}
+
+.boton-exito {
+    background-color: black;
+    color: azure;
+}
+
+button:hover {
+    background-color: yellow;
+}
+
+button:focus {
+    border-color: blue;
+}
