@@ -2,7 +2,7 @@
  * Created by Tania Maricela on 29/05/2017.
  */
 
-let arreglo = [4,6,7,4,5,8,10,4,7];
+let arreglo = [1,2,3,4,5];
 
 //me devuelve un arreglo
 let resultado = arreglo.map (//map muta el arreglo, los cambia
