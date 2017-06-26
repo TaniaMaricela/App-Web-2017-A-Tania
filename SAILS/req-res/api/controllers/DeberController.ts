@@ -20,12 +20,12 @@ module.exports = {
     }
   },
   //3
-  subdomains: (req,res) => {
+  subdomains: (req, res) => {
     res.send(req.subdomains);
   },
   //4
   url: (req, res) => {
-    res.json (req.url);
+    res.json(req.url);
   },
   //5
   wantsJson: (req, res) => {
@@ -45,40 +45,59 @@ module.exports = {
       res.send("Error");
     }
   },
-  accepts : (req, res ) => {
-
-    var accepts = req('accepts');
-    var http = req('http');
-    var accept = accepts(req);
-    switch (accept.type(['json', 'html'])) {
-      case 'json':
-        res.setHeader('Content-Type', 'application/json');
-        res.write('{"hello":"world!"}');
-        break;
-      case 'html':
-        res.setHeader('Content-Type', 'text/html');
-        res.write('<b>hello, world!</b>');
-        break;
-      default:
-        // the fallback is text/plain, so no need to specify it above
-        res.setHeader('Content-Type', 'text/plain');
-        res.write('hello, world!');
-        break
-    }
-
-    res.end();
-  }
   //7
+  accepts: (req, res) => {
+    res.json(req.accepts('json'));
+  },
   //8
+  acceptsCharse: (req, res) => {
+    req.acceptsCharset('utf-8');
+  },
   //9
+  acceptsLanguage: (req, res) => {
+    req.acceptsLanguage('en-gb');
+  },
   //10
+  allParams: (req, res) => {
+    res.json(req.allParams());
+  },
   //11
+  file: (req, res) => {
+    req.file('avatar').upload(function (err, uploadedFiles) {
+      if (err) return res.serverError(err);
+      return res.json({
+        message: files.length + ' file(s) uploaded successfully!',
+        files: files
+      });
+    });
+  },
   //12
+  get: (req, res) => {
+    res.json(req.get('cookieSigned'));
+  },
   //13
+  is: (req, res) => {
+    req.is('html');
+  },
   //14
+  param: (req, res) => {
+    req.param('sku');
+  },
   //15
+  attachment: (req, res) => {
+
+    res.attachment('path/to/logo.png');
+  },
   //16
+  badRequest: (req, res) => {
+    return res.badRequest();
+  },
   //17
+  clearCookie: (req, res) => {
+    res.clearCookie(name [, options
+    ])
+    ;
+  },
 };
 
 
