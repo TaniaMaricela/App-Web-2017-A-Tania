@@ -47,11 +47,11 @@ module.exports = {
     },
     //8
     acceptsCharse: function (req, res) {
-        req.acceptsCharset('utf-8');
+        res.json(req.acceptsCharset('utf-8'));
     },
     //9
     acceptsLanguage: function (req, res) {
-        req.acceptsLanguage('en-gb');
+        res.jason(req.acceptsLanguage('en-gb'));
     },
     //10
     allParams: function (req, res) {
